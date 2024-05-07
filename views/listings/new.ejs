@@ -1,0 +1,44 @@
+<% layout("/layouts/boilerPlate.ejs") %>
+<body>
+<div class="row">
+    <div class="col-lg-6 col-md-6 offset-lg-3 offset-md-3 ">
+    <h3 class="mb-3 mt-3">Create a New Listing</h3>
+    <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]" placeholder="Enter Ttile" type="text" class="form-control" required>
+            <div class="valid-feedback">Title looks good!</div>
+            <div class="invalid-feedback">Please provide a Title.</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" placeholder="Enter Description" class="form-control" rows="5" required></textarea>
+            <div class="valid-feedback">Description looks good!</div>
+            <div class="invalid-feedback">Please provide a short description.</div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input name="listing[image]" type="file" class="form-control">
+        </div>
+    <div class="row">  
+        <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input name="listing[price]" placeholder="Enter Price" type="text" class="form-control" required>
+            <div class="invalid-feedback">Please provide a valid price.</div>
+        </div>
+        <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" placeholder="Enter Country" type="text" class="form-control" required>
+            <div class="invalid-feedback">Please provide the country.</div>
+        </div>
+    </div>
+        <div class="mb-4">
+            <label for="location" class="form-label">Location</label>
+            <input name="listing[location]" placeholder="Enter Location" type="text" class="form-control" required>
+            <div class="invalid-feedback">Please provide a valid location.</div>
+        </div>
+        <button class="btn btn-dark mb-4 new-btn">Add</button>
+    </form>
+  </div>
+</div>
+</body>
